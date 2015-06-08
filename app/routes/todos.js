@@ -6,6 +6,7 @@ export default Ember.Route.extend({
     },
     actions: {
         createTodo: function(newTitle) {
+            console.log("???????")
         var todo = this.store.createRecord('todo', {
                 title: newTitle,
                 isCompleted: false

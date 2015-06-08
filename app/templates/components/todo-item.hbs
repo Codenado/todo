@@ -2,7 +2,7 @@
 
 <li class="{{if todo.isCompleted 'completed'}}">
     {{#if isEditing}}
-        {{input type="text" class="edit" value=title focus-out="acceptChanges"
+        {{input type="text" class="edit" value=todo.title focus-out="acceptChanges"
         insert-newline="acceptChanges"}}
     {{else}}
         {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
