@@ -1,0 +1,31 @@
+{{input type="text" id="new-todo" placeholder="Thing to do." 
+    value=newTitle action="createTodo"}}
+<section id="main">
+   {{outlet}}
+
+	<input type='checkbox' id='toggole-all' checked=allAreDone>
+</section>
+
+
+<footer id='footer'>
+	<span id='todo-count'>
+		<strong>{{remaining}}</strong> {{infection}} left
+	</span>
+	<ul id='filters'>
+		<li>
+            {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
+		</li>
+		<li>
+            {{#link-to "todos.active" activeClass="selected"}}To Do{{/link-to}}
+        </li>
+        <li>
+           {{#link-to "todos.complete" activeClass="selected"}}Done{{/link-to}}
+        </li>
+    </ul>√
+ 
+    {{#if hasCompleted}}
+    <button id="clear-completed" {{action "clearCompleted"}}>
+        Clear completed ({{completed}})
+    </button>
+{{/if}}
+</footer>		
