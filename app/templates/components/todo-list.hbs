@@ -3,13 +3,13 @@
 <section id="main">
    {{outlet}}
 
-	<input type='checkbox' id='toggole-all' checked=allAreDone>
+	{{input type='checkbox' id='toggole-all' checked=allAreDone}}
 </section>
 
 
 <footer id='footer'>
 	<span id='todo-count'>
-		<strong>{{remaining}}</strong> {{infection}} left
+		<strong>{{remaining}}</strong> {{inflection}} left
 	</span>
 	<ul id='filters'>
 		<li>
@@ -21,8 +21,7 @@
         <li>
            {{#link-to "todos.complete" activeClass="selected"}}Done{{/link-to}}
         </li>
-    </ul>√
- 
+    </ul>
     {{#if hasCompleted}}
     <button id="clear-completed" {{action "clearCompleted"}}>
         Clear completed ({{completed}})
